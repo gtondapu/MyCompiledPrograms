@@ -1,1 +1,1 @@
-These are the programs I executed for my practice.
+These are the programs executed for my practice.
