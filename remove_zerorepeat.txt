@@ -1,0 +1,22 @@
+  public static int[] removeZeroRepeat(int[] arr)
+        {
+            int j = 0;
+            int[] narr = new int[arr.Length];
+            for (int i = 0; i < arr.Length; i++)
+            {
+                if(arr[i]!=0) { narr[j] = arr[i];j++; }
+            }
+
+            int dist = narr.Distinct().ToArray().Length;
+            int zero = arr.Length - dist;
+            int[] res = new int[dist-1+zero];
+            int[] x= narr.Distinct().ToArray();
+            for (int i = 0; i < res.Length; i++)
+            {
+                if (i < dist)
+                    res[i] = x[i];
+                else res[i] = 0;
+            }
+
+            return res;
+        }
